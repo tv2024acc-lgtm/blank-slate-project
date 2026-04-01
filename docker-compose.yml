@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: visualcraft-it
+      POSTGRES_USER: visualcraft-it
+      POSTGRES_PASSWORD: visualcraft-it
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
